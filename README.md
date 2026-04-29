@@ -1,9 +1,9 @@
 # Kubernetes Learning Journey
 ## Troubleshooting: ImagePullBackOff Error
 
-প্রজেক্ট করার সময় আমি `frontend-rs` এ `ImagePullBackOff` এরর পেয়েছিলাম।
+প্রজেক্ট করার সময় আমি `frontend-rs` এ `ImagePullBackOff` error পেয়েছিলাম।
 
-### এরর দerror dekhar commad:
+### error dekhar commad:
 `kubectl describe pod <pod-name>`
 
 ### কেন error হয়েছিলো?
