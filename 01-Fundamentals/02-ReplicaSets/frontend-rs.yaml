@@ -1,7 +1,9 @@
-apiVersion: apps/v1
-kind: ReplicaSet
+apiVersion: apps/v1     # <--- Ei line-ta missing thakte pare
+kind: ReplicaSet        # <--- Ei line-ta missing thakte pare
 metadata:
   name: frontend-rs
+  labels:
+    tier: frontend
 spec:
   replicas: 3
   selector:
@@ -14,4 +16,4 @@ spec:
     spec:
       containers:
       - name: php-redis
-        image: gcr.io/google_samples/gb-frontend:v3
+        image: nginx:latest  # <--- Nginx dile ebar 100% cholbe
