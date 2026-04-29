@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: annotation-pod
+  annotations:
+    buildVersion: "1.2.3"
+    owner: "your-name"
+spec:
+  containers:
+  - name: nginx
+    image: nginx
