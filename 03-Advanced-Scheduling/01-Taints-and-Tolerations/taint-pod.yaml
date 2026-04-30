@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: toleration-pod
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+  # এই পডটি blue কালারের Taint সহ্য করতে পারবে
+  tolerations:
+  - key: "color"
+    operator: "Equal"
+    value: "blue"
+    effect: "NoSchedule"

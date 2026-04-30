@@ -1,0 +1,10 @@
+cat <<EOF > normal-pod.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: normal-pod
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+EOF
