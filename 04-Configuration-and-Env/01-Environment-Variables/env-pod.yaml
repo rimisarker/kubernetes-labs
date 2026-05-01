@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: env-demo-pod
+spec:
+  containers:
+  - name: web-container
+    image: nginx:latest
+    imagePullPolicy: Always  # Forcefully internet theke pull korbe
+    env:
+    - name: APP_COLOR
+      value: "blue"
+    - name: APP_MODE
+      value: "production"

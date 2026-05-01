@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-settings
+data:
+  DB_HOST: "db.production.com"
+  LOG_LEVEL: "info"
