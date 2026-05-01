@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: cloud-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: frontend-app # এটি পডের লেবেলের সাথে মিলতে হবে
+  ports:
+    - protocol: TCP
+      port: 80         # সার্ভিসের পোর্ট
+      targetPort: 80   # পডের পোর্ট
