@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: storage-pod
+spec:
+  containers:
+  - name: my-db
+    image: nginx
+    volumeMounts:
+    - mountPath: "/usr/share/nginx/html" # পডের ভেতরের এই ফোল্ডারটি স্টোরেজে সেভ হবে
+      name: my-storage
+  volumes:
+  - name: my-storage
+    persistentVolumeClaim:
+      claimName: my-pvc # ওই PVC-কে ডাকছে

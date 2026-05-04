@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: dynamic-storage-pod
+spec:
+  containers:
+  - name: app-container
+    image: nginx
+    volumeMounts:
+    - name: dynamic-vol
+      mountPath: "/data"
+  volumes:
+  - name: dynamic-vol
+    persistentVolumeClaim:
+      claimName: dynamic-pvc-request

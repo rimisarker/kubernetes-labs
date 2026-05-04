@@ -1,0 +1,7 @@
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: my-local-sc
+provisioner: kubernetes.io/no-provisioner # লোকাল ল্যাবের জন্য
+reclaimPolicy: Retain
+volumeBindingMode: WaitForFirstConsumer # যখন পড তৈরি হবে তখনই স্টোরেজ বানাবে
